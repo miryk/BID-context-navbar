@@ -1,9 +1,11 @@
+import { NameContext } from "../context/NameContext";
+
 const Navbar = () => {
   
   return (
-    <nav>
-      <h1>Hello World!</h1>
-    </nav>
+    <NameContext.Consumer>
+      {value => <div className="nav"><h1>Hello {value.name}!</h1></div>}
+    </NameContext.Consumer>
   )
 }
 
